@@ -1,0 +1,30 @@
+/node_modules
+
+# env variables
+.env
+
+# logg
+*.log
+
+# hardhat
+/artifacts
+/cache
+/typechain
+/deployments
+
+flattened
+
+# hardhat-dependency-compiler
+hardhat-dependency-compiler/
+
+# macOS
+.DS_Store
+
+# Coverage directory used by tools like istanbul
+coverage
+coverage.json
+
+# Solidity Visual Developer
+
+# 
+*.idea
