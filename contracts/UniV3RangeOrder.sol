@@ -98,7 +98,7 @@ contract UniV3RangeOrder is IUniV3RangeOrder {
         } else {
             IERC20(takerAsset).safeApprove(address(nonfungiblePositionManager), takingAmount);
         }
-        
+
         (uint256 tokenId, uint256 liquidity, uint256 amount0, uint256 amount1) = nonfungiblePositionManager.mint{
             value: ethValue
         }(params);
