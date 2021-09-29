@@ -1,8 +1,7 @@
 # Limit Order Protocol UniswapV3 LP
 Provides liquidity to Uniswap V3 for tokens bought with 1inch Limit Order Protocol in one transaction.
 
-1inch Limit Order Protocol is a set of smart contracts. Maker submits limit order with callback function information added. via 1inch API. When you reach the price you specified, the taker should execute your limit order. When the order is executed, your purchased token will be transferred to the specified contract, and the callback function will be called.   
-The Contract then deposits the token to UniswapV3 pool,and transfer its position to the specified receipient.
+1inch Limit Order Protocol is a set of smart contracts. Maker submits limit order with callback function information added. via 1inch API. When the price reach the one you specified, the taker should execute your limit order. When the order is executed, your purchased token will be transferred to the specified contract, and the callback function will be called. The Contract then deposits the token to UniswapV3 pool,and transfer its position to the specified receipient. Only one of the pairs in the pool will be deposited. You cannot specify a `tickLower` or `tickUpper` such that the current price is included in the range for which you want to provide liquidity.
 
 ## About 1inch Limit Order Protocol
 Key features of the protocol is extreme flexibility and high gas efficiency that achieved by using two different order types - regular Limit Order and RFQ Order.

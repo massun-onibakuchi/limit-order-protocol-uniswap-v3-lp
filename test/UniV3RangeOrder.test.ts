@@ -93,6 +93,7 @@ describe("UniswapV3RangeOrder", async function () {
         // if inverse is true, below current price, else above current price, where price is token1 amount per token0
         const tickLower = inverse ? -46080 : 0
         const tickUpper = inverse ? 0 : 22980
+        // interactionData: notification receiver address + uniswap LP params
         const interaction =
             notifReceiver.address +
             ethers.utils.defaultAbiCoder
@@ -100,7 +101,7 @@ describe("UniswapV3RangeOrder", async function () {
                     ["tuple(uint24 fee, int24 tickLower, int24 tickUpper, address recipient) UniV3MintParams"],
                     [
                         {
-                            fee: 3000,
+                            fee: 3000, // Pool fee 0.3%
                             tickLower: tickLower,
                             tickUpper: tickUpper,
                             recipient: signer.address,
