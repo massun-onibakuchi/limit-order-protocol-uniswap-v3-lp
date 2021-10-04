@@ -39,7 +39,7 @@
         "compile": "hardhat compile",
         "console": "hardhat console",
         "verify": "yarn hint && yarn test",
-        "test": "yarn hardhat test --network hardhat --deploy-fixture",
+        "test": "yarn hardhat test --deploy-fixture",
         "typechain": "hardhat typechain",
         "chain": "hardhat node --no-deploy",
         "deploy": "hardhat deploy",
